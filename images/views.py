@@ -48,5 +48,5 @@ class ImageSearchView(ListAPIView):
             ImageSearchSerializer.from_elastic_search(image_response)
             for image_response in response
         ]
-    
+
         return self.get_paginated_response(results)
