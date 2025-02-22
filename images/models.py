@@ -5,6 +5,9 @@ from images.elasticsearch import connection
 
 
 class ElasticImage(Document):
+    """
+    Document model reflection "Imago" index mapping
+    """
     bearbeitet_bild = Text(fields={"keyword": Keyword()})
     bildnummer = Integer()
     breite = Integer()
@@ -27,6 +30,10 @@ class ElasticImage(Document):
 
 
 class Image(models.Model):
+    """
+    Django Model to support Django Filters on Browsable UI
+    Later on it can be used to support non-search related transactional operations
+    """
     bearbeitet_bild = models.TextField()
     bildnummer = models.IntegerField()
     breite = models.IntegerField()
