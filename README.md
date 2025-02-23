@@ -16,3 +16,6 @@ following command.
 ```bash
 make run
 ```
+
+Discoverable API can be found here
+[http://127.0.0.1:8000/search/images/](http://127.0.0.1:8000/search/images/)
